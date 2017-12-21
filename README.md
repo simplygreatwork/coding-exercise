@@ -1,10 +1,10 @@
 # coding-exercise
 
-## A code exercise for external editing of constants in C header files.
+## A code exercise for external editing of constants inside C header files.
 
 - The project is separated into modules.
-- You have to install the code-parser project link to it.
-- These are instructions of how to install and run.
+- You have to install the code-parser project and link to it.
+- These are instructions of how to install and run the project.
 
 ### Install Node.js using Node Version Manager
 ```
