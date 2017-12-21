@@ -1,0 +1,12 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "main": "index.html",
+  "author": "Philip Weaver",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "json-schema": "0.2.3",
+    "socket.io-client": "2.0.4",
+    "vue": "2.5.13"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "code-parser-example",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "scripts": {
+    "start": "node ./src/main.js"
+  },
+  "author": "Philip Weaver",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "code-parser": "1.0.0",
+    "json-schema": "0.2.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "code-parser",
+  "version": "1.0.0",
+  "main": "./src/main.js",
+  "author": "Philip Weaver",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "json-schema": "0.2.3",
+    "tree-sitter": "0.7.5",
+    "tree-sitter-c": "0.4.8"
+  }
+}
