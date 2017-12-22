@@ -53,7 +53,7 @@ npm test
 - This project is using Vue.js because it's simple, it supports bi-directional form data bindings, it provides components, and because Vuetify.js for Vue.js provides a slick library for Material Design.
 - The list view and the editor view are defined as Vue.js components. I'm using a client-side component compiler for rapid development without a build phase. JavaScript is a dynamic language. Production releases will compile the components in a build phase.
 - I'm using an abstract syntax tree for reading and updating the constants. I didn't want to use regular expressions because I believe that correctness is more important than simplicity in this case. I did quite a bit of scouring and research on working with language grammars in JavaScript but then I found this gem of a library "tree-sitter". 
-- I'm using my simple notifications class, Broadcast.js, to send a notification that a list item was selected. When the editor form receieves this notification, it presents the data for editing.
+- I'm using my simple notifications class, Broadcast.js, to send a notification that a list item was selected. When the editor form receives this notification, it presents the data for editing.
 - The code parser module walks the generated abstract syntax tree and uses a simple state machine stack to identify the relevant values.
 - I'm using Vuetify.js very simply in this project. I had been planning to use Vuetify.js for robust guided configurations (wizards).
 
