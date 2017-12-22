@@ -57,7 +57,7 @@ npm test
 - The code parser module walks the generated abstract syntax tree and uses a simple state machine stack to identify the relevant values.
 - I'm using Vuetify.js very simply in this project. I had been planning to use Vuetify.js for robust guided configurations (wizards).
 
-### Improvements
+### Considerations for Improvement
 
 - When updating values in the source file, the most correct way to do it is to traverse each field in reverse by end index. I am already traversing in reverse but this aspect could be even more robust.
 - When the UI is presented, the editor form is empty. The UI ought to at least select the first constant for editing or instead begin with a hidden or disabled editor panel.
