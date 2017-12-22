@@ -6,7 +6,7 @@ Utility = module.exports = {
             return array[array.length - 1];
         }
     },
-
+    
     String : {
         substitute : function(string, substitute, begin, end) {
             return string.substring(0, begin) + substitute + string.substring(end);

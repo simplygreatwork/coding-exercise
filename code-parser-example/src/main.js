@@ -13,12 +13,12 @@ Application = Class.extend({
 		});
 		var items = store.read();
 		items.forEach(function(each) {
-			each.value = each.value + '2';
-			each.comment = each.comment + '!!!';
+			each.value = each.value + '0';
+			each.comment = each.comment + '!';
 		});
 		store.write(items);
 		console.log('\r');
-		console.log('RESULT FILE WITH SUBSTITUTIONS');
+		console.log('RESULT WITH SUBSTITUTIONS');
 		console.log('\r');
 		console.log(store.source);
 	}

@@ -4,9 +4,15 @@
   "main": "./src/main.js",
   "author": "Philip Weaver",
   "license": "UNLICENSED",
+  "scripts": {
+    "test": "node ./tests/main.js"
+  },
   "dependencies": {
     "json-schema": "0.2.3",
     "tree-sitter": "0.7.5",
     "tree-sitter-c": "0.4.8"
+  },
+  "devDependencies": {
+    "tape": "4.8.0"
   }
 }

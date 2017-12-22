@@ -1,7 +1,7 @@
 
 <template>
   <v-list>
-    <v-list-tile v-for="(item, index) in items" @click="select(index)">
+    <v-list-tile v-for="(item, index) in items" :key="item.name" @click="select(index)">
       <v-list-tile-action>
         <v-icon>stars</v-icon>
       </v-list-tile-action>
@@ -16,13 +16,13 @@
 	module.exports = {
 		data: function() {
 			return {
-				items: application.list
+				items: application.items
 			}
 		},
 		methods: {
 			select: function(index) {
 				Broadcast.publish('edit', {
-					item : application.list[index]
+					item : application.items[index]
 				});
 			}
 		}

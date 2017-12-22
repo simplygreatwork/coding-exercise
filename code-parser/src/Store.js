@@ -25,18 +25,9 @@ Store = module.exports = Class.extend({
         return this.array;
     },
     
-    write: function(array) {
+    write : function(array) {
         
-        for (var i = array.length - 1; i >= 0; i--) {
-            var item = array[i];
-            if (item._metadata.comment.startIndex > item._metadata.value.startIndex) {
-                this.source = Utility.String.substitute(this.source, item.comment, item._metadata.comment.startIndex, item._metadata.comment.endIndex);
-                this.source = Utility.String.substitute(this.source, item.value, item._metadata.value.startIndex, item._metadata.value.endIndex);
-            } else {
-                this.source = Utility.String.substitute(this.source, item.value, item._metadata.value.startIndex, item._metadata.value.endIndex);
-                this.source = Utility.String.substitute(this.source, item.comment, item._metadata.comment.startIndex, item._metadata.comment.endIndex);
-            }
-        }
+        this.update(array);
         fs.writeFileSync(this.path, this.source, 'utf8');
     },
     
@@ -77,6 +68,20 @@ Store = module.exports = Class.extend({
             node.children.forEach(function(each) {
                 this.walk(each);
             }.bind(this));
+        }
+    },
+    
+    update: function(array) {
+        
+        for (var i = array.length - 1; i >= 0; i--) {
+            var item = array[i];
+            if (item._metadata.comment.startIndex > item._metadata.value.startIndex) {
+                this.source = Utility.String.substitute(this.source, item.comment, item._metadata.comment.startIndex, item._metadata.comment.endIndex);
+                this.source = Utility.String.substitute(this.source, item.value, item._metadata.value.startIndex, item._metadata.value.endIndex);
+            } else {
+                this.source = Utility.String.substitute(this.source, item.value, item._metadata.value.startIndex, item._metadata.value.endIndex);
+                this.source = Utility.String.substitute(this.source, item.comment, item._metadata.comment.startIndex, item._metadata.comment.endIndex);
+            }
         }
     },
     

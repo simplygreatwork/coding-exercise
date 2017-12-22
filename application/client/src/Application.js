@@ -3,8 +3,8 @@ Application = Class.extend({
 	
 	initialize: function() {
 		
-		window.application= this;
-		this.list = [];
+		window.application = this;
+		this.items = [];
 		this.initializeView();
 		this.initializeConnection(function() {
 			this.read();
@@ -19,7 +19,7 @@ Application = Class.extend({
 			callback();
 		}.bind(this));
 		this.socket.on('disconnect', function() {
-			this.list = [];
+			this.items = [];
 		}.bind(this));
 	},
 	
@@ -48,14 +48,14 @@ Application = Class.extend({
 		
 		this.socket.emit('read', {}, function(result) {
 			result.forEach(function(each) {
-				this.list.push(each);
+				this.items.push(each);
 			}.bind(this));
 		}.bind(this));
 	},
 	
 	write : function() {
 		
-		this.socket.emit('write', this.list, function(result) {
+		this.socket.emit('write', this.items, function(result) {
 			application.data.message = 'The changes have been saved.';
 			application.data.snackbar = true;
 		}.bind(this));
